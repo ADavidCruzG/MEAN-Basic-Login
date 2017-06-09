@@ -1,0 +1,20 @@
+{
+  "name": "mean-basic-login",
+  "version": "1.0.0",
+  "authors": [
+    "Agustín David Cruz González"
+  ],
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "libs"
+  ],
+  "dependencies": {
+    "angular": "~1.6.4",
+    "angularjs-toaster": "2.1.0",
+    "angular-ui-router": "1.0.3",
+    "bootstrap": "3.3.7",
+    "fontawesome": "4.7.0",
+    "jQuery": "3.2.1"
+  }
+}
