@@ -1,0 +1,54 @@
+<form id="registerForm" ng-submit="createUser()">
+    <div class="container">
+        <div class="row margin-top-50">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h6 class="text-center">Formulario de registro básico</h6>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label" for="user.firstName">Nombre</label>
+                            <span class="input-icon">
+                                    <input type="text" id="user.firstName" class="form-control" placeholder="Nombre"
+                                           ng-model="user.firstName" required>
+                                    <i class="fa fa-id-card-o"></i>
+                                </span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="user.lastName">Apellido</label>
+                            <span class="input-icon">
+                                    <input type="text" id="user.lastName" class="form-control" placeholder="Apellido"
+                                           ng-model="user.lastName" required>
+                                    <i class="fa fa-id-card-o"></i>
+                                </span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="user.email">E-mail</label>
+                            <span class="input-icon">
+                                    <input type="email" id="user.email" class="form-control" placeholder="E-mail"
+                                           ng-model="user.email" required>
+                                    <i class="fa fa-at"></i>
+                                </span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="user.password">Contraseña</label>
+                            <span class="input-icon">
+                                    <input type="password" id="user.password" class="form-control"
+                                           placeholder="Contraseña" ng-model="user.password" required>
+                                    <i class="fa fa-lock"></i>
+                                </span>
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn btn-primary" type="submit">
+                                <i class="fa fa-floppy-o"></i>
+                                <span class="hidden-xs"><b>Regístrese</b></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

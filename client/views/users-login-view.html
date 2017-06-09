@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row margin-top-50">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h1 class="text-center login-title">Iniciar sesión</h1>
+            <div class="account-wall">
+                <img src="img/login.png" class="profile-img img-responsive"/>
+                <form id="loginForm" class="form-signin" ng-submit="loginUser()">
+                    <div class="form-group">
+                        <label class="control-label" for="user.email">E-mail</label>
+                        <span class="input-icon">
+                            <input type="email" id="user.email" class="form-control" placeholder="E-mail"
+                                   ng-model="user.email" required>
+                                <i class="fa fa-at"></i>
+                            </span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="user.password">Contraseña</label>
+                        <span class="input-icon">
+                            <input type="password" id="user.password" class="form-control"
+                                   placeholder="Contraseña" ng-model="user.password" required>
+                                <i class="fa fa-lock"></i>
+                            </span>
+                    </div>
+                    <div class="form-group text-center">
+                        <button class="btn btn-lg btn-success btn-block" type="submit">
+                            <i class="fa fa-sign-in"></i>
+                            <span class="hidden-xs"><b>Ingresar</b></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

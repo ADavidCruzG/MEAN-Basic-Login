@@ -38,15 +38,25 @@ router.get('/:email', (req, res, next) => {
 });
 
 /* GET user by email with decrypted password. */
-router.get('/:email/login', (req, res, next) => {
-    userModel.findOne({email: req.params.email}, (err, user) => {
+router.post('/login', (req, res, next) => {
+    console.log('Entra a endpoint');
+    userModel.findOne({email: req.body.email}, (err, user) => {
         if (err) {
             return next(err);
         }
 
-        // Acá se desencripta la contraseña antes de retornar el usuario
-        user.password = userUtil.decryptUserPassword(user.salt, user.password);
-        res.json(user);
+        if (user === 'undefined' || user === null) {
+            res.json({message: 'User does not exists', status: 404});
+        } else {
+            // Acá se desencripta y compara la contraseña antes de retornar
+            user.password = userUtil.decryptUserPassword(user.salt, user.password);
+
+            if (user.password === req.body.password) {
+                res.json({message: 'Password Match', status: 200, user: user});
+            } else {
+                res.json({message: 'Wrong Password', status: 4041});
+            }
+        }
     });
 });
 
